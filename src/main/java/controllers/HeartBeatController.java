@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 public class HeartBeatController
 {
-
     @RequestMapping("/heartbeat")
     public String heartBeat()
     {
