@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ConfigurationServiceImpl implements ConfigurationService
 {
     private static final Logger logger = LoggerFactory.getLogger(ConfigurationServiceImpl.class);
@@ -46,8 +48,8 @@ public class ConfigurationServiceImpl implements ConfigurationService
     }
 
     @Override
-    public void refresh()
+    public void reconfigure()
     {
-
+        logger.info("Reconfiguring...");
     }
 }
