@@ -29,6 +29,6 @@ public class HeartBeatControllerTest
     {
         mvc.perform(MockMvcRequestBuilders.get("/heartbeat").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Heartbeat!")));
+                .andExpect(content().string(equalTo("I am still here!")));
     }
 }

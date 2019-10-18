@@ -9,6 +9,6 @@ public class HeartBeatController
     @RequestMapping("/heartbeat")
     public String heartBeat()
     {
-        return "Heartbeat!";
+        return "I am still here!";
     }
 }

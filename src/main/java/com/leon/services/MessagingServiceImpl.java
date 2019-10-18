@@ -1,9 +1,21 @@
 package com.leon.services;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class MessagingServiceImpl implements MessagingService
 {
-    public void send(String destination, String message)
+    private static final Logger logger = LoggerFactory.getLogger(MessagingServiceImpl.class);
+
+    public void sendGetRequest(String destination, String message)
     {
-        System.out.println("send");
+    }
+
+    public void sendPostRequest(String destination, String message)
+    {
+    }
+
+    public void sendPostMetric(String destination, String key, String value)
+    {
     }
 }
