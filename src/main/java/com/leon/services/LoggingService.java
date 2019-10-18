@@ -1,4 +1,4 @@
-package services;
+package com.leon.services;
 
 public interface LoggingService
 {
