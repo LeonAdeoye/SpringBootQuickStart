@@ -1,8 +1,11 @@
 package com.leon.services;
 
+import com.leon.models.Configuration;
+
+import java.util.List;
+
 public interface MessagingService
 {
-    public void sendGetRequest(String destination, String message);
-    public void sendPostRequest(String destination, String message);
-    public void sendPostMetric(String destination, String key, String value);
+    public void saveConfiguration(Configuration configfuration);
+    public List<Configuration> loadAllConfigurations();
 }
