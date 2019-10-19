@@ -8,10 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -21,8 +19,7 @@ public class ConfigurationServiceImpl implements ConfigurationService
 
     // TODO: change component name
     private static final String THIS_COMPONENT_NAME = "SpringBootQuickStart";
-    private static final String SYSTEM = "system";
-    private static Map<String, Map<String,Configuration>> configurations;
+    private static Map<String, Map<String,List<Configuration>>> configurations;
 
     @Autowired
     private MessagingService messagingService;
@@ -40,15 +37,12 @@ public class ConfigurationServiceImpl implements ConfigurationService
     }
 
     @Override
-    public String getComponentConfigurationValue(String key)
+    public String getConfigurationValue(String owner, String key)
     {
-        return this.configurations.get(key).get(SYSTEM).getValue();
-    }
+        if(!configurations.containsKey(key) || !configurations.get(key).containsKey(owner) || configurations.get(key).get(owner).size() == 0)
+            return "";
 
-    @Override
-    public String getSystemConfigurationValue(String key)
-    {
-        return this.configurations.get(key).get(THIS_COMPONENT_NAME).getValue();
+        return this.configurations.get(key).get(owner).get(0).getValue();
     }
 
     @Override
@@ -63,7 +57,8 @@ public class ConfigurationServiceImpl implements ConfigurationService
     public void loadAllConfigurations()
     {
         List<Configuration> loadedConfigurations = this.messagingService.loadAllConfigurations();
-        loadedConfigurations.stream().collect(Collectors.groupingBy(Configuration::getKey, Collectors.groupingBy(Configuration::getOwner)));
+        configurations = loadedConfigurations.stream().collect(Collectors.groupingBy(Configuration::getKey, Collectors.groupingBy(Configuration::getOwner)));
+        logger.info("Retrieved configurations: " + configurations);
     }
 
     @Override

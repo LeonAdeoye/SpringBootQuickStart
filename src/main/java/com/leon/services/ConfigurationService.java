@@ -6,8 +6,7 @@ import java.util.List;
 
 public interface ConfigurationService
 {
-    public String getSystemConfigurationValue(String key);
-    public String getComponentConfigurationValue(String key);
+    public String getConfigurationValue(String owner, String key);
     public void saveConfiguration(String owner, String key, String value);
     public void loadAllConfigurations();
     public void reconfigure();
