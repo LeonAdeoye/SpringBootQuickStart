@@ -25,4 +25,8 @@ rm -rf .git/
 
 - [ ] Rename file **./quick-start.iml** to \<service-name>.iml
 
+- [ ] Update **THIS_COMPONENT_NAME** private static variable in ConfigurationService implementation java file.
+
+- [ ] Update port number in **application.properties** file.
+
 - [ ] Run `mvn install` to ensure everything compiles.
