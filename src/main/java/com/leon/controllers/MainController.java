@@ -2,6 +2,7 @@ package com.leon.controllers;
 
 import com.leon.services.ConfigurationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.slf4j.Logger;
@@ -14,6 +15,7 @@ public class MainController
     @Autowired
     private ConfigurationService configurationService;
 
+    @CrossOrigin
     @RequestMapping("/reconfigure")
     public void reconfigure()
     {
