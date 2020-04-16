@@ -21,7 +21,7 @@ rm -rf .git/
 
 - [ ] Open the **./idea/compiler.xml** file and replace all 3 module references of the text **quick-start** with \<service-name>
 
-- [ ] Open the **./idea/workspace.xml** filer and replace all references of the text **quick-start** with \<service-name>
+- [ ] Open the **./idea/workspace.xml** file and replace all references of the text **quick-start** with \<service-name>
 
 - [ ] Rename file **./quick-start.iml** to \<service-name>.iml
 
