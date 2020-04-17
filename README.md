@@ -29,6 +29,6 @@ rm -rf .git/
 
 - [ ] Update port number in **application.properties** file in src/main/resources/
 
-- [ ] Update **quick-start.log* appender file name in src/main/resources/logback.xml
+- [ ] Update the **quick-start.log** appender file names in src/main/resources/logback.xml
 
 - [ ] Run `mvn install` to ensure everything compiles.
