@@ -10,7 +10,7 @@ cd <service-name>
 rm -rf .git/
 ```
 
-- [ ] Update artificat Id in **pom.xml** file
+- [ ] Update artifact Id in **pom.xml** file
 ```
 <groupId>com.leon</groupId>
 <artifactId>service-name</artifactId>
@@ -25,8 +25,10 @@ rm -rf .git/
 
 - [ ] Rename file **./quick-start.iml** to \<service-name>.iml
 
-- [ ] Update **THIS_COMPONENT_NAME** private static variable in ConfigurationService implementation java file.
+- [ ] Update **THIS_COMPONENT_NAME** private static variable in the **services/ConfigurationServiceImpl** java file.
 
-- [ ] Update port number in **application.properties** file.
+- [ ] Update port number in **application.properties** file in src/main/resources/
+
+- [ ] Update **quick-start.log* appender file name in src/main/resources/logback.xml
 
 - [ ] Run `mvn install` to ensure everything compiles.
