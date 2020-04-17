@@ -27,8 +27,8 @@ rm -rf .git/
 
 - [ ] Update **THIS_COMPONENT_NAME** private static variable in the **services/ConfigurationServiceImpl** java file.
 
-- [ ] Update port number in **application.properties** file in src/main/resources/
+- [ ] Update port number in **application.properties** file in the **src/main/resources/** folder.
 
-- [ ] Update the **quick-start.log** appender file names in src/main/resources/logback.xml
+- [ ] Update the **quick-start.log** appender file names in **src/main/resources/logback.xml** configuration file.
 
 - [ ] Run `mvn install` to ensure everything compiles.
