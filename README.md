@@ -27,7 +27,9 @@ rm -rf .git/
 
 - [ ] Update **THIS_COMPONENT_NAME** private static variable in the **services/ConfigurationServiceImpl** java file.
 
-- [ ] Update port number in **application.properties** file in the **src/main/resources/** folder.
+- [ ] Update server.port number in **application.properties** file in the **src/main/resources/** folder.
+
+- [ ] Update server.hostname  in **application.properties** file in the **src/main/resources/** folder if it is not to be set to the value of localhost.
 
 - [ ] Update the **quick-start.log** appender file names in **src/main/resources/logback.xml** configuration file.
 
