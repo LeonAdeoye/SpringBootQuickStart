@@ -15,6 +15,14 @@ public class MainController
     @Autowired
     private ConfigurationService configurationService;
 
+    @RequestMapping("/heartbeat")
+    public String heartBeat()
+    {
+        logger.debug("Received heartbeat request and will respond.");
+
+        return "I am still here!";
+    }
+
     @CrossOrigin
     @RequestMapping("/reconfigure")
     public void reconfigure()
