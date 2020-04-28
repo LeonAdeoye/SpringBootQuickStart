@@ -8,6 +8,7 @@ git clone https://github.com/LeonAdeoye/SpringBootQuickStart.git
 mv SpringBootQuickStart/ <service-name>/
 cd <service-name>
 rm -rf .git/
+rm README.md
 ```
 
 - [ ] Update artifact Id in **pom.xml** file
