@@ -35,3 +35,5 @@ rm README.md
 - [ ] Update the **quick-start.log** appender file names in **src/main/resources/logback.xml** configuration file.
 
 - [ ] Run `mvn install` to ensure everything compiles.
+
+- [ ] Update ./scripts/start-service.sh and ./scripts/stop-service.sh.
